@@ -3,7 +3,8 @@ import xml.etree.ElementTree as etree
 
 
 class JSONDataExtractor:
-
+    
+    # json.load(f) takes in a file and returns a dictionary
     def __init__(self, filepath):
         self.data = dict()
         with open(filepath, mode='r', encoding='utf-8') as f:
@@ -15,7 +16,8 @@ class JSONDataExtractor:
 
 
 class XMLDataExtractor:
-
+    
+    # etree.parse(f) parse the file and returns a list of xml.etree.Element
     def __init__(self, filepath):
         self.tree =  etree.parse(filepath)
 
